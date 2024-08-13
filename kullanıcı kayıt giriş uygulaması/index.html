@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Auth System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="registerForm">
+            <h2>Register</h2>
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+        </div>
+
+        <div class="form-container" id="loginForm" style="display:none;">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Register here</a></p>
+        </div>
+
+        <div class="form-container" id="profileForm" style="display:none;">
+            <h2>Profile</h2>
+            <input type="text" id="profileUsername" placeholder="Username" disabled>
+            <input type="email" id="profileEmail" placeholder="Email" required>
+            <input type="password" id="profilePassword" placeholder="New Password (Optional)">
+            <button onclick="updateProfile()">Update Profile</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
